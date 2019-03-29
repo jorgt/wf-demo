@@ -1,0 +1,80 @@
+{
+    "id": "costcenter",
+    "name": "CostCentre",
+    "revision": "1.0",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "information",
+            "type": "section",
+            "title": "Information",
+            "content": [
+                {
+                    "id": "profit_centre",
+                    "type": "integer",
+                    "label": "Cost centre",
+                    "placeholder": "Enter a cost centre",
+                    "readOnly": false,
+                    "value": "${context.Vendor.costCentre}",
+                    "constraints": {
+                        "required": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": "vendor",
+            "type": "section",
+            "title": "Vendor",
+            "content": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "label": "Name",
+                    "readOnly": true,
+                    "value": "${context.Vendor.Name}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "address",
+                    "type": "string",
+                    "label": "Address",
+                    "readOnly": true,
+                    "value": "${context.Vendor.Address}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "city_postcode",
+                    "type": "string",
+                    "label": "City & Postcode",
+                    "readOnly": true,
+                    "value": "${context.Vendor.Citypostcode}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "country",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": true,
+                    "value": "${context.Vendor.Country}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Add",
+            "decisionType": "positive"
+        }
+    ]
+}
